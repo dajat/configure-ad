@@ -2,7 +2,7 @@
 <img src="https://imgur.com/vbQJUlH.png" alt="Microsoft Azure logo"/>
 </p>
 
-<h1>Deploying (On-Premises) Active Directory</h1>
+<h1>On-premises Active Directory Deployed in the Cloud (Azure)</h1>
 This tutorial outlines deploying on-premises Active Directory, creating users inside of the domain controller, and joining the domain controller to a client or user computer.<br />
 
 <h2>Environments and Technologies Used</h2>
@@ -10,6 +10,7 @@ This tutorial outlines deploying on-premises Active Directory, creating users in
 - Microsoft Azure (Virtual Machines/Compute)
 - Remote Desktop
 - Powershell ISE Script
+-Active Directory Domain Services
 
 <h2>Operating Systems Used </h2>
 
