@@ -3,7 +3,7 @@
 </p>
 
 <h1>Deploying (On-Premises) Active Directory</h1>
-This tutorial outlines deploying Active Directory and Creating Users, Domain Name System (DNS), and Network File Sharing and Permissions.<br />
+This tutorial outlines deploying on-premises Active Directory and creating users inside of the domain controller.<br />
 
 <h2>Environments and Technologies Used</h2>
 
