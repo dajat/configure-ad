@@ -24,7 +24,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
 <img src="https://imgur.com/wUFZnxu.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-In Microsoft Azure, I created two virtual machines that run on Windows 10 (Client-1) and Windows Server (Domain Controller or DC). In the virtual machines, I made sure to keep the region, virtual machine size, and virtual network (vnet) were the same to ensure that both machines are running on the same resources to communicate and drive traffic.
+In Microsoft Azure, create two virtual machines that run on Windows 10 (Client-1) and Windows Server (Domain Controller or DC). In the virtual machines, I made sure to keep the region, virtual machine size, and virtual network (vnet) were the same to ensure that both machines are running on the same resources to communicate and drive traffic.
 </p>
 <br />
 <h2>Changing the Domain Controller's Network Interface</h2>
@@ -32,7 +32,7 @@ In Microsoft Azure, I created two virtual machines that run on Windows 10 (Clien
 <img src="https://imgur.com/IKA26tB.png" height="80%" width="80% alt="Disk Sanitization Steps"/>
 </p>
 <p>
-After creating the virtual machines, I changed the Domain Controller's (DC) Network Interface (NIC) to static inside of Microsoft Azure. I have toggled to Networking under the DC-virtal machine --> Click on the virtual NIC --> Click on IP configurations --> Edit the assignment to "Static" --> Click on Save. Changing the NIC to static allows the IP address to stay the same and not change if a computer pulls the IP address.
+After creating the virtual machines, change the Domain Controller's (DC) Network Interface (NIC) to static inside of Microsoft Azure. I have toggled to Networking under the DC-virtal machine --> Click on the virtual NIC --> Click on IP configurations --> Edit the assignment to "Static" --> Click on Save. Changing the NIC to static allows the IP address to stay the same and not change if a computer pulls the IP address.
 </p>
 <br />
 <h2>Viewing Topology</h2>
@@ -40,7 +40,7 @@ After creating the virtual machines, I changed the Domain Controller's (DC) Netw
 <img src="https://imgur.com/oJ72bf9.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-After creating both machines, I reviewed the topology to showcase how both machines were running from the same Vnet and subnet mask. Also, we can see that each virtual machine has its own IP addresses and network security groups.
+After creating both machines, reviewed the topology to showcase how both machines were running from the same Vnet and subnet mask. Also, we can see that each virtual machine has its own IP addresses and network security groups.
 </p>
 <br />
 <h2>Reviewing Connectivity between DC and Client 1</h2>
@@ -48,7 +48,7 @@ After creating both machines, I reviewed the topology to showcase how both machi
 <img src="https://imgur.com/vMMg3os.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-After logging into the DC and Client 1, I completed a perpetual ping to DC's prviate IP address on Client 1 to observe the connectivity. The connectivity has failed due to DC's firewall blocking the ICMP protocols. Thus, I went back to the DC remote desktop and enabled the ICMP4s protocols for "Echo Request" for the pings to respond. After enabling the ICMP4 protocol, I toggled back to Client 1 to review that the ping to DC's private IP address was successful.
+After logging into the DC and Client 1, complete a perpetual ping to DC's prviate IP address on Client 1 to observe the connectivity. The connectivity has failed due to DC's firewall blocking the ICMP protocols. Thus, go back to the DC remote desktop and enabled the ICMP4s protocols for "Echo Request" for the pings to respond. After enabling the ICMP4 protocol, toggle back to Client 1 to review that the ping to DC's private IP address was successful.
 </p>
 <br />
 <h2>Install Active Directory</h2>
@@ -56,7 +56,7 @@ After logging into the DC and Client 1, I completed a perpetual ping to DC's prv
 <img src="https://imgur.com/DmOn0oJ.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-After reviewing the connectivity between both machines, I began to install Active Directory on the domain controller by opening Server Manager --> Clicking on "Tools" --> Clicking on "Active Directory Users and Computers" --> Clicking on "Add Roles and Features" and starting the setup wizard. Under "Server Roles", select "Active Directory Domain Services" and complete the remainder of the setup wizard. Once the installation is complete, the notifications flag will have a hazard notification next to it.
+After reviewing the connectivity between both machines, install Active Directory on the domain controller by opening Server Manager --> Clicking on "Tools" --> Clicking on "Active Directory Users and Computers" --> Clicking on "Add Roles and Features" and starting the setup wizard. Under "Server Roles", select "Active Directory Domain Services" and complete the remainder of the setup wizard. Once the installation is complete, the notifications flag will have a hazard notification next to it.
 </p>
 <br />
 <h2>Continue Installing Active Directory</h2>
